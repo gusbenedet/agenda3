@@ -1,0 +1,18 @@
+#tabela {
+    width: 200px;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 5px;
+    border: 1px solid rgb(236, 26, 26);
+    background: #fff;
+}
+
+.diaria {
+    padding: 0.625rem;
+}
+.diaria:nth-child(odd) {
+    background: #ffffff;
+}
+.diaria:nth-child(even) {
+    background: rgb(225, 255, 176);
+}

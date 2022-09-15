@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGENDA - Login</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(45deg, cyan, rgb(54, 1, 246));
+        }
+        .quadro-login {
+            background-color: rgba(0, 0, 0, 0.8); /* fundo com transparencia nivel 0.8 */
+            position: absolute;                 /* ocupa o espaço dos elementos, do texto */
+            top: 50%;                           /* abaixar */
+            left: 50%;                          /* para os lados */
+            transform: translate(-50%,-50%);    /* centralizar de acordo com o tamanho da pagina */
+            padding: 80px;                      /* distância entre os elementos e a borda */
+            border-radius: 15px;                /* arredondar as bordas */
+            color:aqua;
+        }
+        .input-login {
+            padding: 15px;
+            border: none;
+            outline: none;
+            font-size: 15px;
+        }
+        .botao-login {
+            background-color: dodgerblue;
+            border: none;
+            padding: 15px;
+            width: 100%;
+            border-radius: 10px;
+            color: aqua;
+            font-size: 15px;
+        }
+        .botao-login:hover {        /* mudanças ao posicionar o cursor sobre */
+            background-color: deepskyblue;
+            cursor: pointer;
+        }
+        .olho-senha {
+            position: absolute;
+            top: 228px;
+            right: 90px;
+            cursor: pointer;
+            color:gray;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="quadro-login">
+        <h1>Bem-vindo(a)!</h1>
+        <form action="{{ url_for('login') }}" method="POST">
+            <input type="text" class="input-login" name="email" id="email" placeholder="Email">
+            <br><br>                                                            <!-- (duas) quebras de linhas -->
+            <input type="password" class="input-login" name="senha" id="senha" placeholder="Senha">
+            <span class="olho-senha">&#x1F441;</span>
+            <script>                                             /* script do olho de visualizar senha */
+                let btn = document.querySelector('.olho-senha');
+                btn.addEventListener('click', function() {
+                
+                    let input = document.querySelector('#senha');
+                
+                    if(input.getAttribute('type') == 'password') {
+                        input.setAttribute('type', 'text');
+                    } else {
+                        input.setAttribute('type', 'password');
+                    }
+                
+                });
+                </script>
+            <br><br>
+            <input class="botao-login" type="submit" name="submit" value="Entrar">
+            <br><h6><b>____________________________________</b></h6><br>
+        </form>
+        <form action="cadastro.html">
+            <button class="botao-login" href="cadastro.html" onclick="">Cadastrar-se</button>
+            
+            <!--<input class="botao-login" type="submit" name="submit" value="Cadastrar-se">
+            SUBMITAR dá conflito com python pois ele espera dados para serem enviados a algum lugar (como no caso de login - nome e senha)-->
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda</title>
+</head>
+<body>
+    <input type="date" name="data_select" id="data_select" class="inputSelect"> 
+
+    <script>
+    if (!Modernizr.inputtypes.date) {
+        $(function() {
+            $( "#data_select" ).datepicker();
+        });
+
+
+    if (!Modernizr.inputtypes.date) {
+        $(function () {
+            $("input[type='date']")
+                    .datepicker()
+                    .get(0)
+                    .setAttribute("type", "text");
+        })
+    }
+    </script>
+
+
+/*
+<!--
+<script>
+    final DatePicker datePicker = new DatePicker();
+    datePicker.setOnAction(new EventHandler() {
+        public void handle(Event t) {
+            LocalDate date = datePicker.getValue();
+            System.err.println("Selected date: " + date);
+        }
+    });
+
+    
+    LocalDate isoDate = datePicker.getValue();
+    ChronoLocalDate chronoDate =
+        ((isoDate != null) ? datePicker.getChronology().date(isoDate) : null);
+    System.err.println("Selected date: " + chronoDate);
+    </script>
+
+
+
+<div id='resultado'>
+    <h2 id='id1' class='diaria'>Agenda do dia</h2>
+    <p id='hora1' class='diaria'></p>
+    <p id='nome1' class='diaria'></p>
+    <p id='obs1' class='diaria'></p>
+</div>
+
+*/
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGENDA - Página inicial</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(to right, cyan, rgb(54, 1, 246));
+            text-align: center; /*centralizar o texto */
+            color:aqua;
+        }
+        .box {
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 30px;
+            border-radius: 15px;
+        }
+        .acessos {
+            text-decoration: none;
+            color: aqua;
+            border: 3px solid dodgerblue;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        .acessos:hover {
+            background-color: dodgerblue;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <a class="voltar" href="teste-home.html">Voltar</a> <!-- botão de voltar pagina; lembrar de incluir ela nas outras pages -->
+
+    <h1>Agenda</h1>
+    <div class="box">
+        <a class="acessos" href="login.html">Login</a>
+        <a class="acessos" href="">Cadastrar-se</a>
+    </div>
+</body>
+</html>
